@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bai tap 4 </title>
+</head>
+<body>
+<form>
+
+
+    <tr>
+            <td align="left">LENGHTH of RETANGLE</td>
+            <td><input type="text" id="length"></td>
+        </tr><br>
+        <tr>
+            <td align="left">WIDTH of RETANGLE</td>
+            <td><input type="text" id="width"></td>
+        </tr>
+    <br>
+    <tr>
+            <td><input type="button" value="Show Rectangle" onclick="createRectangle()"></td>
+
+        </tr><br>
+        <tr>
+            <td align="center"></td>
+            <td><canvas id="myCanvas" width="800" height="400"></canvas></td>
+        </tr><br>
+
+</form>
+<script>
+    let Rectangle = function (length, width) {
+        this.length = length;
+        this.width= width;
+        this.getLength = function () {
+            return this.length;
+        };
+        this.getWidth = function () {
+            return this.width;
+        };
+
+    };
+    function createRectangle() {
+        let inputlength = parseInt(document.getElementById("length").value);
+        let inputwidth = parseInt(document.getElementById("width").value);
+        let rectangle = new Rectangle(inputlength, inputwidth);
+        let length = rectangle.getLength();
+        let width = rectangle.getWidth();
+        let c = document.getElementById("myCanvas");
+        let ctx = c.getContext("2d");
+        ctx.beginPath();
+        ctx.fillStyle = "#000000";
+        ctx.fillRect(10,10,length,width);
+        ctx.stroke();
+    }
+</script>
+</body>
+</html>
