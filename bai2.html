@@ -6,14 +6,14 @@
 </head>
 <body>
 <script>
-    function tryRemoveFromArray(array, n) {
-        for (let i = 0; i < array.length; i++) {
-            if (array[i] === n) {
-                array.splice(i, 1);
+    function tryRemoveFromArray(arr, n) {
+        for (let i = 0; i < arr.length; i++) {
+            if (arr[i] === n) {
+                arr.splice(i, 1);
                 i--;
             }
         }
-        return array;
+        return arr;
     }
     let arrNumber = [12, 6, 3, 7, 21, 5, 7];
     let numRemove = 12;
