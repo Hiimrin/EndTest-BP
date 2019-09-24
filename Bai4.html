@@ -6,26 +6,22 @@
 </head>
 <body>
 <form>
-
-
     <tr>
-            <td align="left">LENGHTH of RETANGLE</td>
-            <td><input type="text" id="length"></td>
+         <td align="left">LENGHTH of RETANGLE</td>
+         <td><input type="text" id="length"></td>
         </tr><br>
-        <tr>
-            <td align="left">WIDTH of RETANGLE</td>
-            <td><input type="text" id="width"></td>
-        </tr>
+    <tr>
+         <td align="left">WIDTH of RETANGLE</td>
+         <td><input type="text" id="width"></td>
+    </tr>
     <br>
     <tr>
-            <td><input type="button" value="Show Rectangle" onclick="createRectangle()"></td>
-
-        </tr><br>
-        <tr>
-            <td align="center"></td>
-            <td><canvas id="myCanvas" width="800" height="400"></canvas></td>
-        </tr><br>
-
+         <td><input type="button" value="Show Rectangle" onclick="createRectangle()"></td>
+    </tr><br>
+    <tr>
+         <td align="center"></td>
+         <td><canvas id="myCanvas" width="800" height="400"></canvas></td>
+    </tr><br>
 </form>
 <script>
     let Rectangle = function (length, width) {
@@ -37,7 +33,6 @@
         this.getWidth = function () {
             return this.width;
         };
-
     };
     function createRectangle() {
         let inputlength = parseInt(document.getElementById("length").value);
